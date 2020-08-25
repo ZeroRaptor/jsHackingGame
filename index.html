@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="ping.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body oncopy="return false" oncut="return false" onpaste="return false" onload="startUp()">
+
+    <div id="overlay"> <div id="endArr" onclick="endgameNext()">&#8680</div><div id="optionContainer"><p id="yes" onclick="btnYes()">Yes</p><p id="no" onclick="btnNo()">No</p></div></div>
+    <div id="tutContainer">
+        <div id="tutHeader"></div>
+        <div id="tutMenu">
+            <div id="tutOutput"></div>
+            <input type="text" id="tutInput" onkeypress="tutorialInput()" spellcheck="false">
+            <img src="robot1.PNG" id="robotImg">
+            <div id="tutRoOutput"></div>
+        </div>
+    </div>
+
+    <div id="bgStripe"></div>
+
+    <div id="contentContainer">
+        <div id="outputHeader"></div>
+        <div id="outputMain"><img src="pause.png" id="pause" onclick="pause()"></div>
+        <div class="break"></div>
+        <div id="inputContainer">
+            <input type="text" id="inputMain" spellcheck="false" onkeypress="enterMain()" onkeydown="cmdHistory()"/><div id="enterBtn" onclick="enterBtn()"><span id="enterArr">&#8680</span></div>
+        </div>
+        <div id="UIContainer">
+            <div id="UIHeader"></div>
+            <div id="UIMenu"></div>
+        </div>
+    </div>
+
+    <div id="pauseHeader"></div>
+    <div id="pauseMenu"><button id="btnResume" onclick="resume()">Resume</button><button id="btnRestart" onclick="restart()">Reset Game</button></div>
+
+    <div id="robotContainer">
+        <div id="robotNotif"></div>
+        <div id="robotHeader"></div>
+        <div id="robotMenu"></div>
+    </div>
+
+    <div id="newsReportContainer">
+        <div id="newsHeader">APOCALYPSE NEWS</div>
+        <div id="newsUnderline">
+            <span id="undr1">- Since 2001 -</span>
+            <span id="undr2">Reporting all major apocolyptic events</span>
+            <span id="undr3">- Since 2001 -</span>
+        </div>
+        <div id="newsSubheading"></div>
+        <div id="newsContent">
+            <div id="newsImg"><button id="playAgain" onclick="restart()">Play Again</button></div>
+            <div id="newsPara1"></div>
+            <div id="newsPara2"></div>
+        </div>
+    </div>
+
+</body>
+</html>
